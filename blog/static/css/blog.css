@@ -1,0 +1,126 @@
+:root {
+    --primary-blue: #4a90e2;       /* Crisp, clean light blue 
+    --hover-blue: #2a75d3;         /* Slightly darker blue for interactive hover states 
+    --bg-light-blue: #f0f7ff;      /* Soft ice-blue tint for subtle accents 
+    --text-dark: #2c3e50;          /* Slate dark instead of harsh pitch black 
+    --text-muted: #8a9ba8;         /* Clean gray for dates 
+
+
+/* Core Layout & Typography */
+h1, h2, h3, h4 {
+    font-family: 'Oranienbaum', serif; 
+    color: var(--text-dark);
+}
+
+/* Header Section */
+.page-header {
+    background-color: var(--primary-blue);
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding: 30px 40px;        
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); 
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 2.5rem;             
+}
+
+.page-header h1 a,
+.page-header h1 a:visited,
+.page-header h1 a:active {
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.page-header h1 a:hover {
+    opacity: 0.85;
+}
+
+/* Navigation / Top Menu */
+.top-menu,
+.top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 1.75rem;
+    margin-right: 20px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.top-menu:hover {
+    color: var(--bg-light-blue);   /* Fades to a soft blue on hover */
+}
+
+/* Blog Posts List */
+.post {
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eef2f5; /* Subtle divider between blog entries */
+}
+
+.post h2 a,
+.post h2 a:visited {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.post h2 a:hover {
+    color: var(--primary-blue);
+}
+
+.date {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.post > .date,
+.post > .actions {
+    float: right;
+}
+
+.save {
+    float: right;
+}
+
+/* Forms & Text Fields */
+.post-form textarea,
+.post-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;        /* Crucial: keeps padding inside the 100% width boundary */
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.post-form textarea:focus,
+.post-form input:focus {
+    border-color: var(--primary-blue);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.15); /* Soft blue glow when typing */
+}
+
+/* Buttons */
+.btn-secondary,
+.btn-secondary:visited {
+    color: var(--primary-blue);
+    background: transparent;
+    border: 2px solid var(--primary-blue);
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: 600;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;     /* Animates the hover background fill */
+}
+
+.btn-secondary:hover {
+    color: #ffffff;
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
